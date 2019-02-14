@@ -19,6 +19,15 @@ const officeController= {
          )
     },
 
+    getAllOffices(req, res) {
+        const getoffice = officemodel.getAlloffices();
+        res.status(200).send({
+            status:200,
+            data:getoffice
+        })
+    },
+
+   
     
 
     

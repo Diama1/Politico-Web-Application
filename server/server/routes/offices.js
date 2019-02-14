@@ -5,6 +5,7 @@ const router = express.Router();
 
 
 router.post('/',officeControl.officeCreate);
+router.get('/',officeControl.getAllOffices)
 
 
 

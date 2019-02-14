@@ -21,6 +21,9 @@ class Politicoffice {
 
     
 
+    getAlloffices(){
+        return this.offices;
+    }
     
     
     
