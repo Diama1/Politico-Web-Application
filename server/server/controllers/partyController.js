@@ -32,7 +32,29 @@ const partyController= {
             status:200,
             data:getoneparty
         })
-    }
+    },
+    EditParty(req, res) {
+        let editparty = partymodal.getOneParty(req.params.id);
+        if (!editparty) {
+            res.status(404).send({
+                status:404,
+                message:"Party does not exist"
+            });
+        } 
+        else {
+            const editparty = partymodal.editParty(req.params.id,req.body);
+            res.status(200).send({
+                status:200,
+                data: editparty
+            });
+
+        }
+        
+        
+        
+    },
+    
+
 }
 
 export default partyController;

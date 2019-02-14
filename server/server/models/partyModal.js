@@ -29,6 +29,20 @@ class Party {
 
     }
 
+    editParty(id,party){
+
+        const partyIndex = this.parties.findIndex(party => {
+            return party.id === parseInt(id,10);
+        });
+        if (partyIndex > -1){
+            this.parties[partyIndex].name = party.name;
+
+            return this.parties[partyIndex];
+        }
+        
+        
+    }
+
 
 }
 
