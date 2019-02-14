@@ -48,11 +48,26 @@ const partyController= {
                 data: editparty
             });
 
-        }
-        
-        
-        
+        }  
     },
+    partyDelete(req,res) {
+        let party_to_delete = partymodal.getOneParty(req.params.id);
+        if (!party_to_delete) {
+            res.status(404).send({
+                status:404,
+                message:"Party does not exist"
+            });
+        } 
+        else {
+            const delete_party = partymodal.deleteParty(req.params.id);
+            res.status(200).send({
+                status:200,
+                data: delete_party
+            });
+
+        }  
+
+    }
     
 
 }

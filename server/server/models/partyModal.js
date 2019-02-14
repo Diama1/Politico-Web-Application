@@ -18,6 +18,7 @@ class Party {
     
 }
 
+
     
 
     getAllParties(){
@@ -42,6 +43,21 @@ class Party {
         
         
     }
+    deleteParty(id){
+
+        const partyIndex = this.parties.findIndex(party => {
+            return party.id === parseInt(id,10);
+        });
+        if (partyIndex > -1){
+            this.parties.splice(partyIndex,1);
+            return this.parties;
+        }
+        
+        
+        
+    }
+
+    
 
 
 }

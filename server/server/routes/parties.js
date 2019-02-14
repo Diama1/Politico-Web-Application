@@ -8,6 +8,7 @@ router.post('/', partyController.createPart);
 router.get('/',partyController.getAllParties);
 router.get('/:id',partyController.getOne);
 router.put('/:id',partyController.EditParty);
+router.delete('/:id',partyController.partyDelete);
 
 
 
