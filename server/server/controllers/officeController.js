@@ -27,7 +27,13 @@ const officeController= {
         })
     },
 
-   
+    getOne(req, res) {
+        const getOneoffice = officemodel.getOneoffice(req.params.id);
+        res.status(200).send({
+            status:200,
+            data:getOneoffice
+        })
+    },
     
 
     

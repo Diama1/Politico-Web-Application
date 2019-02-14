@@ -24,7 +24,12 @@ class Politicoffice {
     getAlloffices(){
         return this.offices;
     }
+    getOneoffice(id){
+        return this.offices.find(office => office.id === parseInt(id,10));
     
+
+    }
+
     
     
 
