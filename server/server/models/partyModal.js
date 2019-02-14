@@ -23,6 +23,11 @@ class Party {
     getAllParties(){
         return this.parties;
     }
+    getOneParty(id){
+        return this.parties.find(party => party.id === parseInt(id,10));
+    
+
+    }
 
 
 }

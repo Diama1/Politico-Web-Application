@@ -24,6 +24,14 @@ const partyController= {
             status:200,
             data:getparty
         })
+    },
+
+    getOne(req, res) {
+        const getoneparty = partymodal.getOneParty(req.params.id);
+        res.status(200).send({
+            status:200,
+            data:getoneparty
+        })
     }
 }
 
