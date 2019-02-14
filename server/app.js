@@ -1,16 +1,18 @@
-const express = require('express');
+import express from 'express';
+import routers from './server/routes/parties';
+import bodyParser from 'body-parser';
+
 const app = express();
-const bodyParser = require('body-parser');
-const routers = require('./routes/parties');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
-app.use('/parties',routers);
+app.use('/api/v1/parties',routers);
+// app.use('/offices',routers);
 
-const port = process.env.port || 3030;
+const port = process.env.port || 8000;
 
 app.listen(port, () => {
-
+    console.log(`You are on port ${port}`)
 })
 
-module.exports = app;
+export default app;
