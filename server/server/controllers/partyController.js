@@ -18,7 +18,13 @@ const partyController= {
          )
     },
 
-    
+    getAllParties(req, res) {
+        const getparty = partymodal.getAllParties();
+        res.status(200).send({
+            status:200,
+            data:getparty
+        })
+    }
 }
 
 export default partyController;

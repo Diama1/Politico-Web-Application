@@ -20,6 +20,9 @@ class Party {
 
     
 
+    getAllParties(){
+        return this.parties;
+    }
 
 
 }
