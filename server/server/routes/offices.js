@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.post('/',officeControl.officeCreate);
 router.get('/',officeControl.getAllOffices)
-
+router.get('/:id',officeControl.getOne);
 
 
 export default router;
