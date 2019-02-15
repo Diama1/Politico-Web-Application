@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Politico</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+
+
+        <style type="text/css">
+            #banner > .inner > :last-child {
+                margin-bottom: 30em ;
+                margin-top: 30em }
+
+			#footer
+			{
+            padding:0em 0 ;
+        }
+		
+        </style>
+
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a class="logo" href="index.html">Politico</a>
+				<a class="dashboard" href="admin.html">Dashboard</a>
+				<nav>
+
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					
+				</ul>
+			</nav>
+
+		<!-- Banner -->
+			<section id="banner">
+				<div class="inner">
+                     
+   					<div class="admin_login">
+   						<h1>Login </h1>
+
+   						<form action="dashboard.html" method="post">
+   							<div class="field-wrap">
+	   							<input type="text" name="username" placeholder="Username" required autocomplete="off">
+	   						</div>
+	   							<input type="Password" name="username" placeholder="Username" required autocomplete="off">
+	   							<p class="forgot"><a href="#">Forgot Password?</a></p>
+                            <button class="button button-block">Log In</button>
+
+   						</form>
+   					</div>
+    
+				</div>
+				<!-- <video autoplay loop muted playsinline src="../images/banner.mp4"></video> -->
+			</section>
+
+		
+
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<div class="copyright">
+						&copy; copyright .
+					</div>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+			<script type="text/javascript">  
+ 
+        function Showlogin() {
+            var login = document.getElementById("login");
+            var sign_up = document.getElementById("signup");
+
+            login.style.display = "block";
+            sign_up.style.display = "none";
+            document.getElementById("item2").classList.add("active");
+            document.getElementById("item1").classList.remove("active");
+
+
+
+        }
+        function ShowSign() {
+            document.getElementById("login").style.display = "none";
+            document.getElementById("signup").style.display = "block";
+            document.getElementById("item2").classList.remove("active");
+            document.getElementById("item1").classList.add("active");
+        }
+
+    </script>  
+
+	</body>
+</html>
